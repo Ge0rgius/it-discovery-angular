@@ -1,14 +1,14 @@
 export class Book {
 
-  title?: string;
+  title: string | undefined;
 
-  author?: string;
+  author: string | undefined;
 
-  pages?: number;
+  pages: number | undefined;
 
-  description?: string;
+  description: string | undefined;
 
-  year?: number;
+  year: number | undefined;
 
 
   // constructor(public title: string, public author: string,
