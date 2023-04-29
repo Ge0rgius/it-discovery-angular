@@ -1,12 +1,14 @@
+type StringNonInitialized = string | undefined;
+
 export class Book {
 
-  title: string | undefined;
+  title: StringNonInitialized;
 
-  author: string | undefined;
+  author: StringNonInitialized;
 
   pages: number | undefined;
 
-  description: string | undefined;
+  description: StringNonInitialized;
 
   year: number | undefined;
 
