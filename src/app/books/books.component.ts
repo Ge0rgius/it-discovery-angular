@@ -27,7 +27,11 @@ export class BooksComponent {
       author: 'Minko Gechev',
       description: 'Start using TypeScript to supercharge your Angular 2 applications',
       year: 2016,
-      pages: 2544
+      pages: 254
     }];
+  }
+
+  isJavaScript(book: Book): boolean | undefined {
+    return book.title?.includes('JavaScript');
   }
 }
