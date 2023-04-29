@@ -1,15 +1,18 @@
-<div>
+<div (click)="onClick(book.title)">
   Book title: {{book.title}}
 </div>
-<div>
+<div (click)="onClick(book.author)">
   Book author: {{book.author}}
 </div>
 <div>
   Book description: {{book.description}}
 </div>
-<div>
+<div (click)="onClick(book.pages)">
   Book pages: {{book.pages}}
 </div>
-<div>
+<div (click)="onClick(book.year)">
   Book year: {{book.year}}
+</div>
+<div>
+  {{symbolCount}}
 </div>

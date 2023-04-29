@@ -10,6 +10,8 @@ export class BookComponent {
 
   book: Book;
 
+  symbolCount?: number;
+
   constructor() {
     this.book = {
       title: "Angular 15",
@@ -18,5 +20,9 @@ export class BookComponent {
       description: "Angular development guide",
       pages: 1000
     }
+  }
+
+  onClick(text: string | number | undefined): void {
+    this.symbolCount = text?.toString().length;
   }
 }
