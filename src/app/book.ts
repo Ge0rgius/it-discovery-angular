@@ -1,19 +1,20 @@
 type StringNonInitialized = string | undefined;
 
-export class Book {
+export interface Book {
 
-  title: StringNonInitialized;
+  title: string;
 
-  author: StringNonInitialized;
+  author: string;
 
-  pages: number | undefined;
+  pages: number;
 
-  description: StringNonInitialized;
+  description: string;
 
-  year: number | undefined;
+  year: number;
 
 
   // constructor(public title: string, public author: string,
   //             public pages: number, public description: string, public year: number) {
   // }
 }
+
