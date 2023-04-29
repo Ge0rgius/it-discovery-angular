@@ -7,17 +7,21 @@ import {BookComponent} from './book/book.component';
 import {BooksComponent} from './books/books.component';
 import {BookService} from "./book.service";
 import {QuotePipe} from './quote.pipe';
+import {BookRegistrationComponent} from './book-registration/book-registration.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
     BooksComponent,
-    QuotePipe
+    QuotePipe,
+    BookRegistrationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
