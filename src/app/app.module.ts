@@ -6,12 +6,14 @@ import {AppComponent} from './app.component';
 import {BookComponent} from './book/book.component';
 import {BooksComponent} from './books/books.component';
 import {BookService} from "./book.service";
+import {QuotePipe} from './quote.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
-    BooksComponent
+    BooksComponent,
+    QuotePipe
   ],
   imports: [
     BrowserModule,

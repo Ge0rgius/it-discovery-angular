@@ -12,6 +12,8 @@ export class Book {
 
   year?: number;
 
+  price?: number;
+
 
   // constructor(public title: string, public author: string,
   //             public pages: number, public description: string, public year: number) {
