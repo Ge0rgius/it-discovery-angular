@@ -11,6 +11,7 @@ import {BookRegistrationComponent} from './book-registration/book-registration.c
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HighlightDirective} from './highlight.directive';
 import {BookDetailsComponent} from './book-details/book-details.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {BookDetailsComponent} from './book-details/book-details.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
