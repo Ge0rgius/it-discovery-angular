@@ -6,7 +6,7 @@
     <div>Year: {{book.year}}</div>
     <div>Pages: {{book.pages}}</div>
     <div>Price: {{book.price | currency: 'UAH': 'symbol'}}</div>
-    <div appHighlight highlightColor="'yellow'" [highlightText]="searchText">
+    <div appHighlight highlightColor="yellow" [highlightText]="searchText" [originalHTML]="book.description">
       Description: {{book.description}}</div>
     <input [(ngModel)]="searchText">
   </div>

@@ -11,13 +11,14 @@ export class HighlightDirective implements OnInit, OnChanges {
   @Input()
   highlightText?: string | undefined;
 
-  originalHTML?: string;
+  @Input()
+  originalHTML?: string | undefined;
 
   constructor(private el: ElementRef) {
   }
 
   ngOnInit(): void {
-    this.originalHTML = this.el.nativeElement.innerHTML;
+
   }
 
   highlight(): void {
@@ -28,13 +29,13 @@ export class HighlightDirective implements OnInit, OnChanges {
 
     const regExp = new RegExp(`${this.highlightText}`, 'gi');
     this.el.nativeElement.innerHTML = this.originalHTML?.replace(regExp,
-      `<span style="background-color: ${this.highlightColor}">$1</span>`);
+      `<span style="background-color: ${this.highlightColor}">${this.highlightText}</span>`);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['highlightText'].firstChange) {
-      return;
-    }
+    // if (changes['highlightText'].firstChange) {
+    //   return;
+    // }
     this.highlight();
   }
 
