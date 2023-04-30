@@ -8,7 +8,7 @@ import {BooksComponent} from './books/books.component';
 import {BookService} from "./book.service";
 import {QuotePipe} from './quote.pipe';
 import {BookRegistrationComponent} from './book-registration/book-registration.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import {FormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
