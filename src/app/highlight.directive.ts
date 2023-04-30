@@ -1,9 +1,9 @@
-import {Directive, ElementRef, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Directive, ElementRef, Input, OnChanges, SimpleChanges} from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
 })
-export class HighlightDirective implements OnInit, OnChanges {
+export class HighlightDirective implements OnChanges {
 
   @Input()
   highlightColor?: string;
@@ -15,10 +15,6 @@ export class HighlightDirective implements OnInit, OnChanges {
   originalHTML?: string | undefined;
 
   constructor(private el: ElementRef) {
-  }
-
-  ngOnInit(): void {
-
   }
 
   highlight(): void {
@@ -33,9 +29,6 @@ export class HighlightDirective implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    // if (changes['highlightText'].firstChange) {
-    //   return;
-    // }
     this.highlight();
   }
 

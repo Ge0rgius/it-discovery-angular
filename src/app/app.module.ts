@@ -10,6 +10,7 @@ import {QuotePipe} from './quote.pipe';
 import {BookRegistrationComponent} from './book-registration/book-registration.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HighlightDirective} from './highlight.directive';
+import {BookDetailsComponent} from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HighlightDirective} from './highlight.directive';
     BooksComponent,
     QuotePipe,
     BookRegistrationComponent,
-    HighlightDirective
+    HighlightDirective,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,

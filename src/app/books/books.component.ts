@@ -11,8 +11,6 @@ export class BooksComponent implements OnInit {
 
   books?: Book[];
 
-  searchText?: string;
-
   constructor(private bookService: BookService) {
 
   }
