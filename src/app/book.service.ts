@@ -43,4 +43,10 @@ export class BookService {
     return this.getBooks().pipe(
       map(books => books.map(book => book.title).includes(title)));
   }
+
+  findBook(bookId: number): Observable<Book | undefined> {
+    return this.getBooks().pipe(
+      map(books => books.find(book => book.id === bookId))
+    );
+  }
 }

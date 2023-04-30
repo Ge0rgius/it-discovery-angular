@@ -1,6 +1,7 @@
 type StringNonInitialized = string | undefined;
 
 export class Book {
+  id?: number;
 
   title?: string;
 

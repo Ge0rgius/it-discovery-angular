@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Book} from "../book";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-book-details',
@@ -7,11 +8,18 @@ import {Book} from "../book";
   styleUrls: ['./book-details.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BookDetailsComponent {
+export class BookDetailsComponent implements OnInit {
 
-  @Input()
+  // @Input()
   book?: Book;
 
   searchText?: string;
+
+  constructor(private route: ActivatedRoute) {
+  }
+
+  ngOnInit(): void {
+    this.book = this.route.snapshot.data['book'];
+  }
 
 }
