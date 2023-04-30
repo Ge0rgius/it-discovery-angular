@@ -11,7 +11,8 @@ import {BookRegistrationComponent} from './book-registration/book-registration.c
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HighlightDirective} from './highlight.directive';
 import {BookDetailsComponent} from './book-details/book-details.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {ErrorHandlerInterceptor} from "./error-handler.interceptor";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [BookService],
+  providers: [BookService, {
+    provide: HTTP_INTERCEPTORS, useClass: ErrorHandlerInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
