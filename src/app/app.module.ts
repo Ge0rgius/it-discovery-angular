@@ -9,6 +9,7 @@ import {BookService} from "./book.service";
 import {QuotePipe} from './quote.pipe';
 import {BookRegistrationComponent} from './book-registration/book-registration.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HighlightDirective} from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     BookComponent,
     BooksComponent,
     QuotePipe,
-    BookRegistrationComponent
+    BookRegistrationComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
