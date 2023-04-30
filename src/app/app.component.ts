@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {map, range} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -33,4 +34,10 @@ export class AppComponent /*implements OnInit, OnChanges, AfterContentChecked, A
   //   console.log("ngOnInit");
   // }
 
+
+  constructor() {
+    range(0, 26).pipe(
+      map(x => String.fromCharCode(x + "a".charCodeAt(0)))
+    ).subscribe(res => console.log(res));
+  }
 }

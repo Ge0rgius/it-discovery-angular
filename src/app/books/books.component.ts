@@ -16,7 +16,7 @@ export class BooksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.books = this.bookService.getBooks();
+    this.bookService.getBooks().subscribe(value => this.books = value);
   }
 
   isJavaScript(book: Book): boolean | undefined {
